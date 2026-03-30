@@ -246,7 +246,7 @@ class Life {
     }
 
     format(discription) {
-        return discription.replaceAll(/\{\s*[0-9a-zA-Z_-]+\s*?\}/g, (match) => this.#format(match));
+        return `${discription}`.replaceAll(/\{\s*[0-9a-zA-Z_-]+\s*?\}/g, (match) => this.#format(match));
     }
 
     #format(key) {
